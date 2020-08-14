@@ -15,7 +15,7 @@ class IntegranteController extends Controller
     public function index()
     {
         $integrantes = Integrante::get();
-        json_encode($integrantes);
+        echo json_encode($integrantes);
     }
 
 

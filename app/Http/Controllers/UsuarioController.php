@@ -15,7 +15,7 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = Usuario::get();
-        json_encode($usuarios);
+        echo json_encode($usuarios);
     }
 
 

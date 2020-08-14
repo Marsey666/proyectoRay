@@ -15,7 +15,7 @@ class DireccionController extends Controller
     public function index()
     {
         $direcciones = Direccion::get();
-        json_encode($direcciones);
+        echo json_encode($direcciones);
     }
 
    
