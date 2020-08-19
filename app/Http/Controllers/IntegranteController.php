@@ -17,6 +17,10 @@ class IntegranteController extends Controller
         $integrantes = Integrante::get();
         echo json_encode($integrantes);
     }
+    public function filter(){
+        $data = array();
+        return view ("integrante/filter",$data);
+    }
 
 
     /**

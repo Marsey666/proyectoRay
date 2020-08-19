@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home');
+Route::get('/about', 'HomeController@about');
+
+
+//RUTAS NUESTRAS USUARIO-INTEGRANTE-DIRECCION
+Route::get('/usuarios/filter','UsuarioController@filter');
+Route::resource("usuarios",'UsuarioController');
+
+Route::get('/integrantes/filter','IntegranteController@filter');
+Route::resource("integrantes",'IntegranteController');
+
+Route::get('/direccions/filter','DireccionController@filter');
+Route::resource("direccions",'DireccionController');
+

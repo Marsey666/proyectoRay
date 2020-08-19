@@ -17,6 +17,10 @@ class DireccionController extends Controller
         $direcciones = Direccion::get();
         echo json_encode($direcciones);
     }
+    public function filter(){
+        $data = array();
+        return view ("direccion/filter",$data);
+    }
 
    
 

@@ -17,7 +17,10 @@ class UsuarioController extends Controller
         $usuarios = Usuario::get();
         echo json_encode($usuarios);
     }
-
+    public function filter(){
+        $data = array();
+        return view ("usuario/filter",$data);
+    }
 
     /**
      * Store a newly created resource in storage.
